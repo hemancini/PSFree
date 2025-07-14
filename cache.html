@@ -1,31 +1,46 @@
 <html manifest="psfree_lapse.cache">
-<head>
-<title>PSFree-Lapse Exploit For PS4 9.00</title>
-<link rel="shortcut icon" href="favicon.ico"></link>
-<style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: sans-serif;
-      font-size: 28px;
-      background-color: #060606;
-      color: #ffffff;
-    }
-</style>
-<script>
-history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));msgs.innerHTML="Installing Offline Cache ... " + Percent + "%"};
-function DisplayCacheProgress(){
-setTimeout(function(){msgs.innerHTML="Cache Installed Successfully";},2000);
-setTimeout(function(){location.reload();},3000);
-}
-window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-</script>
-</head>
-<body style=overflow:hidden>
-<div id=msgs></div>
-</body>
+  <head>
+    <title>PSFree-Lapse Exploit For PS4 9.00</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 28px;
+        background-color: #060606;
+        color: #ffffff;
+      }
+    </style>
+    <script>
+      history.replaceState(null, null, "index.html");
+      var histlength = history.length;
+      history.go(-histlength);
+      function DLProgress(e) {
+        Percent = Math.round((e.loaded / e.total) * 100);
+        msgs.innerHTML = "Installing Offline Cache ... " + Percent + "%";
+      }
+      function DisplayCacheProgress() {
+        setTimeout(function () {
+          msgs.innerHTML = "Cache Installed Successfully";
+        }, 2000);
+        setTimeout(function () {
+          location.reload();
+        }, 3000);
+      }
+      window.applicationCache.addEventListener("progress", DLProgress, false);
+      window.applicationCache.oncached = function (e) {
+        DisplayCacheProgress();
+      };
+      window.applicationCache.onupdateready = function (e) {
+        DisplayCacheProgress();
+      };
+    </script>
+  </head>
+  <body style="overflow: hidden">
+    <div id="msgs"></div>
+  </body>
 </html>
